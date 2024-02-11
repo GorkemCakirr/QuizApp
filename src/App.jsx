@@ -1,8 +1,9 @@
 import {useState, useRef, useEffect} from "react";
 import image from "./assets/quiz-logo.png";
 import Question from "./components/Question";
-import Answer from "./components/answer";
+import Answer from "./components/Answer";
 import {answers} from "./data";
+import Progress from "./components/Progress";
 
 
 const questions = {
@@ -14,6 +15,7 @@ function App() {
   const [questionNum, setQuestionNum] = useState(1);
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
+console.log(selectedTopic)
 
 
   function handleSelected(currentValue) {
@@ -40,8 +42,7 @@ function App() {
     }
   });
 
-  console.log(selectedTopic);
-  console.log(isCorrect);
+ 
 
  
   return (
@@ -49,6 +50,7 @@ function App() {
       <header>
         <img src={image} alt="" />
         <h1>REACTQUIZ</h1>
+        {selectedTopic !== null && <Progress selectedTopic={selectedTopic}/>}
       </header>
 
       <div id="quiz">

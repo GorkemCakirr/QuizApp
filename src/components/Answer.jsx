@@ -21,8 +21,6 @@ export default function Answer({isCorrect, isSelected, answer, onClick}) {
     }
   }, [isSelected]);
 
-  console.log(selectedStyle);
-
   return (
     <>
       <div className="answer">

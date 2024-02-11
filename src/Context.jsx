@@ -1,9 +1,8 @@
-import { createContext, use } from "react";
+import { createContext } from "react";
 
 export const QuizContext = createContext({
-    questionNum:[],
-    isCorrect:[],
-selectedTopic:[]
+  selectedStyle:[],
+  handleselectedStyle : () => {}
 })
 
 
