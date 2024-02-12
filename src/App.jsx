@@ -1,19 +1,23 @@
 import {useState, useRef, useEffect} from "react";
-import image from "./assets/quiz-logo.png";
-import Question from "./components/Question";
-import Answer from "./components/Answer";
-import {answers} from "./data";
-import Progress from "./components/Progress";
 import Header from "./components/Header";
+import Quiz from "./components/Quiz";
 
 function App() {
-  return(
-    <Header/>
-    )
 
 
+  return (
+    <>
+      <Header />
+      <main>
+        <Quiz />
+      </main>
+    </>
+  );
 }
 
+
+
+export default App;
 // const questions = {
 //   question_1: "How do you typicallyu render list content in React apps?",
 //   question_2: "Which approach can NOT be used to render context conditionally?",
@@ -107,5 +111,3 @@ function App() {
 //     }
 //   }, 3000);
 // },);
-
-export default App;
