@@ -24,7 +24,6 @@ export default function Answers({
           isSelected
         ) {
           cssClass = answerState;
-          console.log("cssClass");
         }
 
         return (
@@ -34,6 +33,7 @@ export default function Answers({
                 onSelect(answer);
               }}
               className={cssClass}
+              disabled={answerState !== ""}
             >
               {answer}
             </button>
